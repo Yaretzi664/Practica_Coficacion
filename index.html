@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practica 2</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Bienvenido a mi página</h1>
+    </header>
+
+    <div class="contenido">
+        <h2>Holiii</h2>
+
+        <p>
+            Esta es una página web sencilla creada con HTML y CSS para hacer la práctica de JOSUÉ.
+        </p>
+
+        <button id="boton">Haz clic aquí</button>
+
+        <p id="mensaje"></p>
+    </div>
+
+    <footer>
+        <p>© 2026 Practica_2</p>
+    </footer>
+
+    <!-- JavaScript principal -->
+    <script src="app.js"></script>
+
+    <!-- Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("sw.js")
+            .then(() => {
+                console.log("Service Worker registrado correctamente");
+            })
+            .catch((error) => {
+                console.error("Error al registrar el Service Worker:", error);
+            });
+        });
+        }
+    </script>
+
+</body>
+
+</html>
